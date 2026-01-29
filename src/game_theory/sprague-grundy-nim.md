@@ -154,8 +154,10 @@ By induction, we assume the values $x_i$ corresponding to its reachable vertices
 
 Let $p = \text{mex}\ \{ x_1, \ldots, x_k \}$.
 Then we know that for any integer $i \in [0, p)$ there exists a reachable vertex with Grundy value $i$.
+By the definition of $\text{mex}$, there is no reachable vertex with Grundy value $p$.
+
 This means $v$ is **equivalent to a state of the game of Nim with increases with one pile of size $p$**.
-In such a game we have transitions to piles of every size smaller than $p$ and possibly transitions to piles with sizes greater than $p$.
+In such a game we have transitions to piles of every size strictly smaller than $p$, possibly transitions to piles with sizes strictly greater than $p$, and **no transitions to piles with sizes equal to $p$**.
 Therefore, $p$ is indeed the desired Grundy value for the currently considered state.
 
 ## Application of the theorem
